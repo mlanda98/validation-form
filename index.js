@@ -5,7 +5,6 @@ function handleSubmit(event){
 
   const emailInput = document.getElementById("email");
   const emailValue = emailInput.value;
-  console.log(emailValue);
   if (emailValue === ""){
     emailInput.setCustomValidity("Please enter your email address.")
     emailInput.reportValidity();
@@ -15,7 +14,6 @@ function handleSubmit(event){
   }
   const country = document.getElementById("country");
   const countryValue = country.value;
-  console.log(countryValue);
   if (countryValue === ""){
     country.setCustomValidity("Please select your country.");
     country.reportValidity();
@@ -61,6 +59,11 @@ function handleSubmit(event){
     confirmPasswordInput.reportValidity();
     return;
   }
+    const imageSrc = "high-five.jpeg";
+    const image = document.createElement("img");
+    image.src = imageSrc;
+    document.body.appendChild(image);
+    
     alert("Successfully submitted!");
     form.reset();
   }
