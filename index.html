@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form for="form" id="form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="">Select a country</option>
+      <option value="USA">United States</option>
+      <option value="CAN">Canada</option>
+      <option value="GBR">United Kingdom</option>
+    </select>
+
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" minlength="8">
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password" minlength="8">
+
+    <button type="submit">Submit</button>
+    
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>
